@@ -1,10 +1,15 @@
 package org.web3j.protocol.matrix.methods;
 
 import org.web3j.protocol.Web3j;
+import org.web3j.protocol.Web3jService;
 import org.web3j.protocol.core.Request;
 import org.web3j.protocol.matrix.methods.response.*;
 
 public interface Matrix extends Web3j {
+
+    static Matrix build(Web3jService web3jService) {
+        return new JsonRpc2_0Matrix(web3jService);
+    }
 
     Request<?, MatrixPeerCount> peerCount();
 
@@ -12,7 +17,7 @@ public interface Matrix extends Web3j {
 
     Request<?, MatrixGetBlockByHash> getBlockByHash(String hash);
 
-    Request<?, MatrixGetBlockByNumber> getBlockByNumber(Integer blockHeight);
+    Request<?, MatrixGetBlockByNumber> getBlockByNumber(String blockHeight);
 
     Request<?, MatrixGetTransaction> getTransaction(String hash);
 
@@ -30,6 +35,6 @@ public interface Matrix extends Web3j {
 
     Request<?, MatrixGetBlockHeader> getBlockHeader(String BlockNumber);
 
-    Request<?, MatrixGetStateProof> getStateProof(String BlockNumber);
+    Request<?, MatrixGetStateProof> getStateProof(String address, String position, String BlockNumber);
 
 }

@@ -9,15 +9,25 @@ public class MatrixGetBlockByHash extends Response<MatrixGetBlockByHash> {
 
     /**
      * version : 0
-     * hash : 0x5038c222d460c32fd06df36d58bb7cf5c368a55e207a46ecb18695451bfe4069
-     * header : {"timestamp":1499756200950,"prevHash":"0xb28ec1911d375350664b9673a61d952e9a748f3e63606f1440f313c4911fde58","proof":{"proposal":"0x0f25d396361c7d54bb16389f6a14bf95207915f91d180d382093e19adfc4133b","height":902,"round":0,"commits":{"0x2b027dacd33a41ddb09e21805778f19951776ed5":"0x1532c58faedf9e103dd84aa6aacbd2121aa3a8102faa506e7e152fb10e45bafd31b1c3d372cf5d42f8b27a8bfea112ae194de76d99206f73837ad8c30267e6a501","0x2d74a106464fbdf94e47bb28605a1aa244ab7788":"0x2ec53371cee732d59d23a58cf6cf53d818fb906fdeb5b0521a3a4cdbb75cf29658a1ff5fa95e4dc71563cbed10070c68e2eec0f812fa3be8e019b6df6e9ea66201","0x3efd4959af72e1214ab83caa0f04a0cc3e54d383":"0xb051f0cc41bc3caed472d3c7a35e06d805e8f6d15ccb3efc257d71ee96932c5877a8e52fc29cb3bef73e0edbad62c617c4dd16763709b2604ab8b1db2d87736301","0x5223818f7096520bfad68ce3d5ac959267dbc45f":"0x1cf6f8dc9654d461a317db199de0ed0d2d008762833b3358e269ceb3c412b60b3f1a2bd08f969e0dc1c9ebe1a0710002f853438a6ef3ea048de9b4e67387827400"}},"stateRoot":"0xe29266e5574bc0c848b513d36403d4da71f99f328d3324e8d3134809c33d4fb4","transactionsRoot":"0xf31e32611322f410f430ef8141c2237c19dd1034eddef8dedba692ec9851799b","receiptsRoot":"0x9646cf2572734b4b13fe1616446ab2658e208cfdbaf25e47ebea9b6327e10c5b","gasUsed":"0x0","number":"0x387","proposer":"0xe6d430a2d830236d3774d148cbee72bbf26cd481"}
-     * body : {"transactions":[{"hash":"0xf31e32611322f410f430ef8141c2237c19dd1034eddef8dedba692ec9851799b","content":"0x0a28356230373365393233333934346235653732396534366436313866306438656466336439633334611a80040aba030a28356230373365393233333934346235653732396534366436313866306438656466336439633334611a87030a013010a08d0622fd026060604052341561000c57fe5b5b7f4f8cfde3439a1a302c21ca51eec26086efbfd940b8c0279889fc6bb6e73ecc6633604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a15b5b60fd806100806000396000f30060606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806360fe47b11460445780636d4ce63c146061575bfe5b3415604b57fe5b605f60048080359060200190919050506084565b005b3415606857fe5b606e60c6565b6040518082815260200191505060405180910390f35b7fc6d8c0af6d21f291e7c359603aa97e0ed500f04db6e983b9fce75a91c6b8da6b816040518082815260200191505060405180910390a1806000819055505b50565b600060005490505b905600a165627a7a7230582079ba3769927f0f8cf4bec7ce02513b56823c8fc3f4047989951e042a9a04651900292080808080101241d51ca7a0171113478f47357a71c240bd0431f52639741a6721725de276a88d2e723b12f4bbeb1cdddea63f947ddb9db6e2667f08a03af1577c42d3c1a3dc5a7c01208080808010"}]}
+     * hash : 0x0279e6ba01d88afe886a16d5e28b22213d955577e258312aadc8a49a284ee5e7
+     * header : {"timestamp":1536114746559,"prevHash":"0xdf54b05152f023af9bab5bdaef79f8f6793755586f602a5b5761c74cc03ddfb6","number":"0x67","stateRoot":"0x21d1644375e287cb9acc1dab7d7e3f242230ef4032baafc9231ba72cfa7739f7","transactionsRoot":"0x6011915176e24a1cd70e022984ca37c1e4c5a243e32303e87dd510e70da7a1c5","receiptsRoot":"0xd69f93a8824fde872b170230287527a2d2dd4f1808a7088735361a2268cb60c2","gasUsed":"0xaef9","proof":{"Bft":{"proposal":"0x6d86e1798459711ae5d7e2c58ed5f61de0d3b63db1eecf7b13d6a54882dee7dd","height":102,"round":0,"commits":{"0x530cc9f439c2d99a33246295a43da700b016d099":"0xbf1a1ae2edc2f422ebe4916c41a7f6191f10d4136af1b1e868c14404087b171d528f997461fba78733a3804cc147771e6172173759215d59346f363335591c4700","0x6292ad7281c1cfd166eef5ce3e42293f4a88778b":"0x4af06fa12c0e042ab05799ff0dbbb4b5bed8def93d8ef7be0139a7ad4367cbb63fffa32af613ddb7c5dd2ad1f91c7839ecbb2bc20c65303ccfee0228c06c0aa900","0xb49783afdb65bc11b3c8119dbd41fc76a7d7c420":"0x027ac838278a75d1e9b0ed524048d6da54bc41d4ad70c5c9977eb4dac2c109da5938107a29306345afb6e23206725d48eedce47137f512d5af58093f1320392101","0xa78658e76f4af7591d55af9539f8d5ba82ff4e26":"0xdf447508b655031ef9b0a5e8b65031ba117929d562071f26984f210efb3e962a16ce25a1f4d49ef38be2b027712718870433d12c6fe7acb157eb6ec4c44a147901"}}},"proposer":"0xb49783afdb65bc11b3c8119dbd41fc76a7d7c420"}
+     * body : {"transactions":[{"hash":"0x6011915176e24a1cd70e022984ca37c1e4c5a243e32303e87dd510e70da7a1c5","content":"0x0ab402120645344c334c5418c0843d20ba012afe01608060405234801561001057600080fd5b5060df8061001f6000396000f3006080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806360fe47b114604e5780636d4ce63c146078575b600080fd5b348015605957600080fd5b5060766004803603810190808035906020019092919050505060a0565b005b348015608357600080fd5b50608a60aa565b6040518082815260200191505060405180910390f35b8060008190555050565b600080549050905600a165627a7a723058205aed214856a5c433292a354261c9eb88eed1396c83dabbe105bde142e49838ac00293220000000000000000000000000000000000000000000000000000000000000000038011241c06d98e87d7a944f42688b053be23113b3dbdba0ff10f72be4ee03c2337bb55976319fd19c456d52b2c5e99b6e0677bcb443a9052a053a2199d1cd0b1124316d00"}]}
      */
 
     private int version;
     private String hash;
     private HeaderBean header;
     private BodyBean body;
+
+    public MatrixGetBlockByHash() {
+    }
+
+    public MatrixGetBlockByHash(int version, String hash, HeaderBean header, BodyBean body) {
+        this.version = version;
+        this.hash = hash;
+        this.header = header;
+        this.body = body;
+    }
 
     public int getVersion() {
         return version;
@@ -51,27 +61,27 @@ public class MatrixGetBlockByHash extends Response<MatrixGetBlockByHash> {
         this.body = body;
     }
 
-    public class HeaderBean {
+    public static class HeaderBean {
         /**
-         * timestamp : 1499756200950
-         * prevHash : 0xb28ec1911d375350664b9673a61d952e9a748f3e63606f1440f313c4911fde58
-         * proof : {"proposal":"0x0f25d396361c7d54bb16389f6a14bf95207915f91d180d382093e19adfc4133b","height":902,"round":0,"commits":{"0x2b027dacd33a41ddb09e21805778f19951776ed5":"0x1532c58faedf9e103dd84aa6aacbd2121aa3a8102faa506e7e152fb10e45bafd31b1c3d372cf5d42f8b27a8bfea112ae194de76d99206f73837ad8c30267e6a501","0x2d74a106464fbdf94e47bb28605a1aa244ab7788":"0x2ec53371cee732d59d23a58cf6cf53d818fb906fdeb5b0521a3a4cdbb75cf29658a1ff5fa95e4dc71563cbed10070c68e2eec0f812fa3be8e019b6df6e9ea66201","0x3efd4959af72e1214ab83caa0f04a0cc3e54d383":"0xb051f0cc41bc3caed472d3c7a35e06d805e8f6d15ccb3efc257d71ee96932c5877a8e52fc29cb3bef73e0edbad62c617c4dd16763709b2604ab8b1db2d87736301","0x5223818f7096520bfad68ce3d5ac959267dbc45f":"0x1cf6f8dc9654d461a317db199de0ed0d2d008762833b3358e269ceb3c412b60b3f1a2bd08f969e0dc1c9ebe1a0710002f853438a6ef3ea048de9b4e67387827400"}}
-         * stateRoot : 0xe29266e5574bc0c848b513d36403d4da71f99f328d3324e8d3134809c33d4fb4
-         * transactionsRoot : 0xf31e32611322f410f430ef8141c2237c19dd1034eddef8dedba692ec9851799b
-         * receiptsRoot : 0x9646cf2572734b4b13fe1616446ab2658e208cfdbaf25e47ebea9b6327e10c5b
-         * gasUsed : 0x0
-         * number : 0x387
-         * proposer : 0xe6d430a2d830236d3774d148cbee72bbf26cd481
+         * timestamp : 1536114746559
+         * prevHash : 0xdf54b05152f023af9bab5bdaef79f8f6793755586f602a5b5761c74cc03ddfb6
+         * number : 0x67
+         * stateRoot : 0x21d1644375e287cb9acc1dab7d7e3f242230ef4032baafc9231ba72cfa7739f7
+         * transactionsRoot : 0x6011915176e24a1cd70e022984ca37c1e4c5a243e32303e87dd510e70da7a1c5
+         * receiptsRoot : 0xd69f93a8824fde872b170230287527a2d2dd4f1808a7088735361a2268cb60c2
+         * gasUsed : 0xaef9
+         * proof : {"Bft":{"proposal":"0x6d86e1798459711ae5d7e2c58ed5f61de0d3b63db1eecf7b13d6a54882dee7dd","height":102,"round":0,"commits":{"0x530cc9f439c2d99a33246295a43da700b016d099":"0xbf1a1ae2edc2f422ebe4916c41a7f6191f10d4136af1b1e868c14404087b171d528f997461fba78733a3804cc147771e6172173759215d59346f363335591c4700","0x6292ad7281c1cfd166eef5ce3e42293f4a88778b":"0x4af06fa12c0e042ab05799ff0dbbb4b5bed8def93d8ef7be0139a7ad4367cbb63fffa32af613ddb7c5dd2ad1f91c7839ecbb2bc20c65303ccfee0228c06c0aa900","0xb49783afdb65bc11b3c8119dbd41fc76a7d7c420":"0x027ac838278a75d1e9b0ed524048d6da54bc41d4ad70c5c9977eb4dac2c109da5938107a29306345afb6e23206725d48eedce47137f512d5af58093f1320392101","0xa78658e76f4af7591d55af9539f8d5ba82ff4e26":"0xdf447508b655031ef9b0a5e8b65031ba117929d562071f26984f210efb3e962a16ce25a1f4d49ef38be2b027712718870433d12c6fe7acb157eb6ec4c44a147901"}}}
+         * proposer : 0xb49783afdb65bc11b3c8119dbd41fc76a7d7c420
          */
 
         private long timestamp;
         private String prevHash;
-        private ProofBean proof;
+        private String number;
         private String stateRoot;
         private String transactionsRoot;
         private String receiptsRoot;
         private String gasUsed;
-        private String number;
+        private ProofBean proof;
         private String proposer;
 
         public long getTimestamp() {
@@ -90,12 +100,12 @@ public class MatrixGetBlockByHash extends Response<MatrixGetBlockByHash> {
             this.prevHash = prevHash;
         }
 
-        public ProofBean getProof() {
-            return proof;
+        public String getNumber() {
+            return number;
         }
 
-        public void setProof(ProofBean proof) {
-            this.proof = proof;
+        public void setNumber(String number) {
+            this.number = number;
         }
 
         public String getStateRoot() {
@@ -130,12 +140,12 @@ public class MatrixGetBlockByHash extends Response<MatrixGetBlockByHash> {
             this.gasUsed = gasUsed;
         }
 
-        public String getNumber() {
-            return number;
+        public ProofBean getProof() {
+            return proof;
         }
 
-        public void setNumber(String number) {
-            this.number = number;
+        public void setProof(ProofBean proof) {
+            this.proof = proof;
         }
 
         public String getProposer() {
@@ -146,79 +156,87 @@ public class MatrixGetBlockByHash extends Response<MatrixGetBlockByHash> {
             this.proposer = proposer;
         }
 
-        public class ProofBean {
+        public static class ProofBean {
             /**
-             * proposal : 0x0f25d396361c7d54bb16389f6a14bf95207915f91d180d382093e19adfc4133b
-             * height : 902
-             * round : 0
-             * commits : {"0x2b027dacd33a41ddb09e21805778f19951776ed5":"0x1532c58faedf9e103dd84aa6aacbd2121aa3a8102faa506e7e152fb10e45bafd31b1c3d372cf5d42f8b27a8bfea112ae194de76d99206f73837ad8c30267e6a501","0x2d74a106464fbdf94e47bb28605a1aa244ab7788":"0x2ec53371cee732d59d23a58cf6cf53d818fb906fdeb5b0521a3a4cdbb75cf29658a1ff5fa95e4dc71563cbed10070c68e2eec0f812fa3be8e019b6df6e9ea66201","0x3efd4959af72e1214ab83caa0f04a0cc3e54d383":"0xb051f0cc41bc3caed472d3c7a35e06d805e8f6d15ccb3efc257d71ee96932c5877a8e52fc29cb3bef73e0edbad62c617c4dd16763709b2604ab8b1db2d87736301","0x5223818f7096520bfad68ce3d5ac959267dbc45f":"0x1cf6f8dc9654d461a317db199de0ed0d2d008762833b3358e269ceb3c412b60b3f1a2bd08f969e0dc1c9ebe1a0710002f853438a6ef3ea048de9b4e67387827400"}
+             * Bft : {"proposal":"0x6d86e1798459711ae5d7e2c58ed5f61de0d3b63db1eecf7b13d6a54882dee7dd","height":102,"round":0,"commits":{"0x530cc9f439c2d99a33246295a43da700b016d099":"0xbf1a1ae2edc2f422ebe4916c41a7f6191f10d4136af1b1e868c14404087b171d528f997461fba78733a3804cc147771e6172173759215d59346f363335591c4700","0x6292ad7281c1cfd166eef5ce3e42293f4a88778b":"0x4af06fa12c0e042ab05799ff0dbbb4b5bed8def93d8ef7be0139a7ad4367cbb63fffa32af613ddb7c5dd2ad1f91c7839ecbb2bc20c65303ccfee0228c06c0aa900","0xb49783afdb65bc11b3c8119dbd41fc76a7d7c420":"0x027ac838278a75d1e9b0ed524048d6da54bc41d4ad70c5c9977eb4dac2c109da5938107a29306345afb6e23206725d48eedce47137f512d5af58093f1320392101","0xa78658e76f4af7591d55af9539f8d5ba82ff4e26":"0xdf447508b655031ef9b0a5e8b65031ba117929d562071f26984f210efb3e962a16ce25a1f4d49ef38be2b027712718870433d12c6fe7acb157eb6ec4c44a147901"}}
              */
 
-            private String proposal;
-            private int height;
-            private int round;
-            private Map<String, String> commits;
+            private BftBean Bft;
 
-            public String getProposal() {
-                return proposal;
+            public BftBean getBft() {
+                return Bft;
             }
 
-            public void setProposal(String proposal) {
-                this.proposal = proposal;
+            public void setBft(BftBean Bft) {
+                this.Bft = Bft;
             }
 
-            public int getHeight() {
-                return height;
-            }
+            public static class BftBean {
+                /**
+                 * proposal : 0x6d86e1798459711ae5d7e2c58ed5f61de0d3b63db1eecf7b13d6a54882dee7dd
+                 * height : 102
+                 * round : 0
+                 * commits : {"0x530cc9f439c2d99a33246295a43da700b016d099":"0xbf1a1ae2edc2f422ebe4916c41a7f6191f10d4136af1b1e868c14404087b171d528f997461fba78733a3804cc147771e6172173759215d59346f363335591c4700","0x6292ad7281c1cfd166eef5ce3e42293f4a88778b":"0x4af06fa12c0e042ab05799ff0dbbb4b5bed8def93d8ef7be0139a7ad4367cbb63fffa32af613ddb7c5dd2ad1f91c7839ecbb2bc20c65303ccfee0228c06c0aa900","0xb49783afdb65bc11b3c8119dbd41fc76a7d7c420":"0x027ac838278a75d1e9b0ed524048d6da54bc41d4ad70c5c9977eb4dac2c109da5938107a29306345afb6e23206725d48eedce47137f512d5af58093f1320392101","0xa78658e76f4af7591d55af9539f8d5ba82ff4e26":"0xdf447508b655031ef9b0a5e8b65031ba117929d562071f26984f210efb3e962a16ce25a1f4d49ef38be2b027712718870433d12c6fe7acb157eb6ec4c44a147901"}
+                 */
 
-            public void setHeight(int height) {
-                this.height = height;
-            }
+                private String proposal;
+                private int height;
+                private int round;
+                private Map<String, String> commits;
 
-            public int getRound() {
-                return round;
-            }
+                public String getProposal() {
+                    return proposal;
+                }
 
-            public void setRound(int round) {
-                this.round = round;
-            }
+                public void setProposal(String proposal) {
+                    this.proposal = proposal;
+                }
 
-            public Map<String, String> getCommits() {
-                return commits;
-            }
+                public int getHeight() {
+                    return height;
+                }
 
-            public void setCommits(Map<String, String> commits) {
-                this.commits = commits;
+                public void setHeight(int height) {
+                    this.height = height;
+                }
+
+                public int getRound() {
+                    return round;
+                }
+
+                public void setRound(int round) {
+                    this.round = round;
+                }
+
+                public Map<String, String> getCommits() {
+                    return commits;
+                }
+
+                public void setCommits(Map<String, String> commits) {
+                    this.commits = commits;
+                }
+
+                @Override
+                public String toString() {
+                    return "BftBean{" +
+                            "proposal='" + proposal + '\'' +
+                            ", height=" + height +
+                            ", round=" + round +
+                            ", commits=" + commits +
+                            '}';
+                }
             }
 
             @Override
             public String toString() {
                 return "ProofBean{" +
-                        "proposal='" + proposal + '\'' +
-                        ", height=" + height +
-                        ", round=" + round +
-                        ", commits=" + commits +
+                        "Bft=" + Bft +
                         '}';
             }
         }
-
-        @Override
-        public String toString() {
-            return "HeaderBean{" +
-                    "timestamp=" + timestamp +
-                    ", prevHash='" + prevHash + '\'' +
-                    ", proof=" + proof +
-                    ", stateRoot='" + stateRoot + '\'' +
-                    ", transactionsRoot='" + transactionsRoot + '\'' +
-                    ", receiptsRoot='" + receiptsRoot + '\'' +
-                    ", gasUsed='" + gasUsed + '\'' +
-                    ", number='" + number + '\'' +
-                    ", proposer='" + proposer + '\'' +
-                    '}';
-        }
     }
 
-    public class BodyBean {
+    public static class BodyBean {
         private List<TransactionsBean> transactions;
 
         public List<TransactionsBean> getTransactions() {
@@ -229,10 +247,10 @@ public class MatrixGetBlockByHash extends Response<MatrixGetBlockByHash> {
             this.transactions = transactions;
         }
 
-        public class TransactionsBean {
+        public static class TransactionsBean {
             /**
-             * hash : 0xf31e32611322f410f430ef8141c2237c19dd1034eddef8dedba692ec9851799b
-             * content : 0x0a28356230373365393233333934346235653732396534366436313866306438656466336439633334611a80040aba030a28356230373365393233333934346235653732396534366436313866306438656466336439633334611a87030a013010a08d0622fd026060604052341561000c57fe5b5b7f4f8cfde3439a1a302c21ca51eec26086efbfd940b8c0279889fc6bb6e73ecc6633604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a15b5b60fd806100806000396000f30060606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806360fe47b11460445780636d4ce63c146061575bfe5b3415604b57fe5b605f60048080359060200190919050506084565b005b3415606857fe5b606e60c6565b6040518082815260200191505060405180910390f35b7fc6d8c0af6d21f291e7c359603aa97e0ed500f04db6e983b9fce75a91c6b8da6b816040518082815260200191505060405180910390a1806000819055505b50565b600060005490505b905600a165627a7a7230582079ba3769927f0f8cf4bec7ce02513b56823c8fc3f4047989951e042a9a04651900292080808080101241d51ca7a0171113478f47357a71c240bd0431f52639741a6721725de276a88d2e723b12f4bbeb1cdddea63f947ddb9db6e2667f08a03af1577c42d3c1a3dc5a7c01208080808010
+             * hash : 0x6011915176e24a1cd70e022984ca37c1e4c5a243e32303e87dd510e70da7a1c5
+             * content : 0x0ab402120645344c334c5418c0843d20ba012afe01608060405234801561001057600080fd5b5060df8061001f6000396000f3006080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806360fe47b114604e5780636d4ce63c146078575b600080fd5b348015605957600080fd5b5060766004803603810190808035906020019092919050505060a0565b005b348015608357600080fd5b50608a60aa565b6040518082815260200191505060405180910390f35b8060008190555050565b600080549050905600a165627a7a723058205aed214856a5c433292a354261c9eb88eed1396c83dabbe105bde142e49838ac00293220000000000000000000000000000000000000000000000000000000000000000038011241c06d98e87d7a944f42688b053be23113b3dbdba0ff10f72be4ee03c2337bb55976319fd19c456d52b2c5e99b6e0677bcb443a9052a053a2199d1cd0b1124316d00
              */
 
             private String hash;

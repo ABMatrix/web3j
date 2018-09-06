@@ -31,7 +31,7 @@ public class JsonRpc2_0Matrix extends JsonRpc2_0Web3j implements Matrix {
     @Override
     public Request<?, MatrixBlockNumber> blockNumber() {
         return new Request<>(
-                "getBlockByHash",
+                "blockNumber",
                 Collections.<String>emptyList(),
                 web3jService,
                 MatrixBlockNumber.class);
@@ -47,7 +47,7 @@ public class JsonRpc2_0Matrix extends JsonRpc2_0Web3j implements Matrix {
     }
 
     @Override
-    public Request<?, MatrixGetBlockByNumber> getBlockByNumber(Integer blockHeight) {
+    public Request<?, MatrixGetBlockByNumber> getBlockByNumber(String blockHeight) {
         return new Request<>(
                 "getBlockByNumber",
                 Arrays.asList(blockHeight, true),
@@ -128,10 +128,10 @@ public class JsonRpc2_0Matrix extends JsonRpc2_0Web3j implements Matrix {
     }
 
     @Override
-    public Request<?, MatrixGetStateProof> getStateProof(String BlockNumber) {
+    public Request<?, MatrixGetStateProof> getStateProof(String address, String position, String BlockNumber) {
         return new Request<>(
                 "getStateProof",
-                Arrays.asList(BlockNumber),
+                Arrays.asList(address, position, BlockNumber),
                 web3jService,
                 MatrixGetStateProof.class);
     }
