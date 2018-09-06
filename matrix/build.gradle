@@ -1,0 +1,8 @@
+
+description 'Abmarix JSON-RPC API'
+
+dependencies {
+    compile project(':core')
+    testCompile project(path: ':core', configuration: 'testArtifacts'),
+            "nl.jqno.equalsverifier:equalsverifier:$equalsverifierVersion"
+}
