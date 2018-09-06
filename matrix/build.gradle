@@ -1,5 +1,5 @@
 
-description 'Abmarix JSON-RPC API'
+description 'Abmatrix JSON-RPC API'
 
 dependencies {
     compile project(':core')
