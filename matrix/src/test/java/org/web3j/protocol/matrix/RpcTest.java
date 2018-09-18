@@ -7,7 +7,7 @@ import org.web3j.protocol.matrix.methods.Matrix;
 
 public class RpcTest {
 
-    private Web3jService service = new HttpService("http://192.168.1.100:1337");
+    private Web3jService service = new HttpService("http://192.168.1.200:1338");
 
     private Matrix matrix = Matrix.build(service);
 
@@ -35,7 +35,7 @@ public class RpcTest {
     @Test
     public void testGetBlockByNumber() throws Exception {
 
-        System.out.println(matrix.getBlockByNumber("0x67").send().getResult().getHash());
+        System.out.println(matrix.getBlockByNumber("0x37d29").send().getResult());
 
     }
 
@@ -102,5 +102,10 @@ public class RpcTest {
 
     }
 
+    @Test
+    public void testGetTransactionReceiptf() throws Exception {
 
+        System.out.println(matrix.getTransactionReceipt("0x7e3a82c8951fdc032811826732152fb137e88eaea8f10ea1307fed294f720a9d").send().getResult());
+
+    }
 }

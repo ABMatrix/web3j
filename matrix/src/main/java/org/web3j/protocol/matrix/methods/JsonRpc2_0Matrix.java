@@ -135,4 +135,13 @@ public class JsonRpc2_0Matrix extends JsonRpc2_0Web3j implements Matrix {
                 web3jService,
                 MatrixGetStateProof.class);
     }
+
+    @Override
+    public Request<?, MatrixGetTransactionReceipt> getTransactionReceipt(String transactionHash) {
+        return new Request<>(
+                "getTransactionReceipt",
+                Arrays.asList(transactionHash),
+                web3jService,
+                MatrixGetTransactionReceipt.class);
+    }
 }

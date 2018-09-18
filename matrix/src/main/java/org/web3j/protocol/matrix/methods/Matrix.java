@@ -37,4 +37,6 @@ public interface Matrix extends Web3j {
 
     Request<?, MatrixGetStateProof> getStateProof(String address, String position, String BlockNumber);
 
+    Request<?, MatrixGetTransactionReceipt> getTransactionReceipt(String transactionHash);
+
 }
