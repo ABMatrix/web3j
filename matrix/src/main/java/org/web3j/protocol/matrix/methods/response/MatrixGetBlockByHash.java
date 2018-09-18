@@ -234,6 +234,22 @@ public class MatrixGetBlockByHash extends Response<MatrixGetBlockByHash> {
                         '}';
             }
         }
+
+        @Override
+        public String toString() {
+            return "HeaderBean{" +
+                    "timestamp=" + timestamp +
+                    ", prevHash='" + prevHash + '\'' +
+                    ", number='" + number + '\'' +
+                    ", stateRoot='" + stateRoot + '\'' +
+                    ", transactionsRoot='" + transactionsRoot + '\'' +
+                    ", receiptsRoot='" + receiptsRoot + '\'' +
+                    ", gasUsed='" + gasUsed + '\'' +
+                    ", proof=" + proof +
+                    ", proposer='" + proposer + '\'' +
+                    '}';
+        }
+
     }
 
     public static class BodyBean {
