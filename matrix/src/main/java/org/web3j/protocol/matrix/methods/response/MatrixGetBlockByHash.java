@@ -287,6 +287,14 @@ public class MatrixGetBlockByHash extends Response<MatrixGetBlockByHash> {
             public void setContent(String content) {
                 this.content = content;
             }
+
+            @Override
+            public String toString() {
+                return "TransactionsBean{" +
+                        "hash='" + hash + '\'' +
+                        ", content='" + content + '\'' +
+                        '}';
+            }
         }
 
         @Override
