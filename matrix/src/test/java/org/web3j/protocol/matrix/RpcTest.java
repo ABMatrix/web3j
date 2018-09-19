@@ -35,7 +35,19 @@ public class RpcTest {
     @Test
     public void testGetBlockByNumber() throws Exception {
 
-        System.out.println(matrix.getBlockByNumber("0x37d29").send().getResult());
+//        for (int i = 3000; i < 10000; i++) {
+//
+//            if (matrix.getBlockByNumber("0x" + Integer.toHexString(i)).send().getResult().getBody().getTransactions().size() > 0) {
+//
+//                System.out.println("qwe");
+//
+//                System.out.println(matrix.getBlockByNumber("0x" + Integer.toHexString(i)).send().getResult().getBody());
+//
+//            }
+//
+//        }
+
+        System.out.println(matrix.getBlockByNumber("0x35fd7").send().getResult());
 
     }
 
