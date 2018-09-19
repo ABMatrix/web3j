@@ -49,7 +49,8 @@ allprojects {
 
     apply plugin: 'java'
     apply plugin: 'jacoco'
-    apply plugin: 'checkstyle'
+//    apply plugin: 'checkstyle'
+
 
     repositories {
         mavenCentral()
@@ -81,10 +82,10 @@ allprojects {
         reports.html.destination = file("${reporting.baseDir}/${name}")
     }
 
-    checkstyle {
-        toolVersion = "7.7"
-        configFile = file("${rootProject.projectDir}/config/checkstyle/checkstyle.xml")
-    }
+//    checkstyle {
+//        toolVersion = "7.7"
+//        configFile = file("${rootProject.projectDir}/config/checkstyle/checkstyle.xml")
+//    }
 }
 
 subprojects {
@@ -145,52 +146,52 @@ configure(subprojects.findAll {it.name != 'integration-tests'}) {
         }
     }
 
-    uploadArchives {
-        repositories {
-            mavenDeployer {
-                beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+//    uploadArchives {
+//        repositories {
+//            mavenDeployer {
+//                beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+//
+//                repository(url: 'https://oss.sonatype.org/service/local/staging/deploy/maven2/') {
+//                    authentication(
+//                            userName: ossrhUsername,
+//                            password: ossrhPassword
+//                    )
+//                }
+//
+//                pom.project {
+//                    name 'web3j'
+//                    packaging 'jar'
+//                    description project.description
+//                    url 'https://web3j.io'
+//
+//                    scm {
+//                        connection 'scm:git:https://github.com/web3j/web3j.git'
+//                        url 'https://github.com/web3j/web3j.git'
+//                    }
+//
+//                    licenses {
+//                        license {
+//                            name 'The Apache License, Version 2.0'
+//                            url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//                        }
+//                    }
+//
+//                    developers {
+//                        developer {
+//                            id 'conor10'
+//                            name 'Conor Svensson'
+//                            email 'conor10@gmail.com'
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
 
-                repository(url: 'https://oss.sonatype.org/service/local/staging/deploy/maven2/') {
-                    authentication(
-                            userName: ossrhUsername,
-                            password: ossrhPassword
-                    )
-                }
-
-                pom.project {
-                    name 'web3j'
-                    packaging 'jar'
-                    description project.description
-                    url 'https://web3j.io'
-
-                    scm {
-                        connection 'scm:git:https://github.com/web3j/web3j.git'
-                        url 'https://github.com/web3j/web3j.git'
-                    }
-
-                    licenses {
-                        license {
-                            name 'The Apache License, Version 2.0'
-                            url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                        }
-                    }
-
-                    developers {
-                        developer {
-                            id 'conor10'
-                            name 'Conor Svensson'
-                            email 'conor10@gmail.com'
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    signing {
-        required { gradle.taskGraph.hasTask('uploadArchives') }  // only execute as part of this task
-        sign configurations.archives
-    }
+//    signing {
+//        required { gradle.taskGraph.hasTask('uploadArchives') }  // only execute as part of this task
+//        sign configurations.archives
+//    }
 
     bintray {
         user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
