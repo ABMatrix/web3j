@@ -7,22 +7,10 @@ import java.util.List;
 import java.util.Map;
 
 public class MatrixGetBlockByHash extends Response<MatrixGetBlockByHash> {
-
-
     private int version;
     private String hash;
-    private HeaderBean header;
-    private BodyBean body;
-
-    public MatrixGetBlockByHash() {
-    }
-
-    public MatrixGetBlockByHash(int version, String hash, HeaderBean header, BodyBean body) {
-        this.version = version;
-        this.hash = hash;
-        this.header = header;
-        this.body = body;
-    }
+    private MatrixGetBlockByHash.HeaderBean header;
+    private MatrixGetBlockByHash.BodyBean body;
 
     public int getVersion() {
         return version;
@@ -40,19 +28,19 @@ public class MatrixGetBlockByHash extends Response<MatrixGetBlockByHash> {
         this.hash = hash;
     }
 
-    public HeaderBean getHeader() {
+    public MatrixGetBlockByHash.HeaderBean getHeader() {
         return header;
     }
 
-    public void setHeader(HeaderBean header) {
+    public void setHeader(MatrixGetBlockByHash.HeaderBean header) {
         this.header = header;
     }
 
-    public BodyBean getBody() {
+    public MatrixGetBlockByHash.BodyBean getBody() {
         return body;
     }
 
-    public void setBody(BodyBean body) {
+    public void setBody(MatrixGetBlockByHash.BodyBean body) {
         this.body = body;
     }
 
@@ -66,7 +54,7 @@ public class MatrixGetBlockByHash extends Response<MatrixGetBlockByHash> {
         private String transactionsRoot;
         private String receiptsRoot;
         private String gasUsed;
-        private ProofBean proof;
+        private MatrixGetBlockByHash.HeaderBean.ProofBean proof;
         private String proposer;
 
         public long getTimestamp() {
@@ -125,11 +113,11 @@ public class MatrixGetBlockByHash extends Response<MatrixGetBlockByHash> {
             this.gasUsed = gasUsed;
         }
 
-        public ProofBean getProof() {
+        public MatrixGetBlockByHash.HeaderBean.ProofBean getProof() {
             return proof;
         }
 
-        public void setProof(ProofBean proof) {
+        public void setProof(MatrixGetBlockByHash.HeaderBean.ProofBean proof) {
             this.proof = proof;
         }
 
@@ -143,17 +131,18 @@ public class MatrixGetBlockByHash extends Response<MatrixGetBlockByHash> {
 
         public static class ProofBean {
 
-            private BftBean Bft;
 
-            public BftBean getBft() {
-                return Bft;
+            private MatrixGetBlockByHash.HeaderBean.ProofBean.TendermintBean Tendermint;
+
+            public MatrixGetBlockByHash.HeaderBean.ProofBean.TendermintBean getTendermint() {
+                return Tendermint;
             }
 
-            public void setBft(BftBean Bft) {
-                this.Bft = Bft;
+            public void setTendermint(MatrixGetBlockByHash.HeaderBean.ProofBean.TendermintBean Tendermint) {
+                this.Tendermint = Tendermint;
             }
 
-            public static class BftBean {
+            public static class TendermintBean {
 
                 private String proposal;
                 private BigInteger height;
@@ -194,7 +183,7 @@ public class MatrixGetBlockByHash extends Response<MatrixGetBlockByHash> {
 
                 @Override
                 public String toString() {
-                    return "BftBean{" +
+                    return "TendermintBean{" +
                             "proposal='" + proposal + '\'' +
                             ", height=" + height +
                             ", round=" + round +
@@ -206,7 +195,7 @@ public class MatrixGetBlockByHash extends Response<MatrixGetBlockByHash> {
             @Override
             public String toString() {
                 return "ProofBean{" +
-                        "Bft=" + Bft +
+                        "Tendermint=" + Tendermint +
                         '}';
             }
         }
@@ -225,49 +214,19 @@ public class MatrixGetBlockByHash extends Response<MatrixGetBlockByHash> {
                     ", proposer='" + proposer + '\'' +
                     '}';
         }
-
     }
 
     public static class BodyBean {
-        private List<TransactionsBean> transactions;
+        private List<Map<String, String>> transactions;
 
-        public List<TransactionsBean> getTransactions() {
+        public List<Map<String, String>> getTransactions() {
             return transactions;
         }
 
-        public void setTransactions(List<TransactionsBean> transactions) {
+        public void setTransactions(List<Map<String, String>> transactions) {
             this.transactions = transactions;
         }
 
-        public static class TransactionsBean {
-
-            private String hash;
-            private String content;
-
-            public String getHash() {
-                return hash;
-            }
-
-            public void setHash(String hash) {
-                this.hash = hash;
-            }
-
-            public String getContent() {
-                return content;
-            }
-
-            public void setContent(String content) {
-                this.content = content;
-            }
-
-            @Override
-            public String toString() {
-                return "TransactionsBean{" +
-                        "hash='" + hash + '\'' +
-                        ", content='" + content + '\'' +
-                        '}';
-            }
-        }
 
         @Override
         public String toString() {

@@ -10,8 +10,8 @@ public class MatrixGetBlockByNumber extends Response<MatrixGetBlockByNumber> {
 
     private int version;
     private String hash;
-    private MatrixGetBlockByHash.HeaderBean header;
-    private MatrixGetBlockByHash.BodyBean body;
+    private HeaderBean header;
+    private BodyBean body;
 
     public int getVersion() {
         return version;
@@ -29,19 +29,19 @@ public class MatrixGetBlockByNumber extends Response<MatrixGetBlockByNumber> {
         this.hash = hash;
     }
 
-    public MatrixGetBlockByHash.HeaderBean getHeader() {
+    public HeaderBean getHeader() {
         return header;
     }
 
-    public void setHeader(MatrixGetBlockByHash.HeaderBean header) {
+    public void setHeader(HeaderBean header) {
         this.header = header;
     }
 
-    public MatrixGetBlockByHash.BodyBean getBody() {
+    public BodyBean getBody() {
         return body;
     }
 
-    public void setBody(MatrixGetBlockByHash.BodyBean body) {
+    public void setBody(BodyBean body) {
         this.body = body;
     }
 
@@ -49,12 +49,12 @@ public class MatrixGetBlockByNumber extends Response<MatrixGetBlockByNumber> {
 
         private long timestamp;
         private String prevHash;
-        private MatrixGetBlockByHash.HeaderBean.ProofBean proof;
+        private String number;
         private String stateRoot;
         private String transactionsRoot;
         private String receiptsRoot;
         private String gasUsed;
-        private String number;
+        private ProofBean proof;
         private String proposer;
 
         public long getTimestamp() {
@@ -73,12 +73,12 @@ public class MatrixGetBlockByNumber extends Response<MatrixGetBlockByNumber> {
             this.prevHash = prevHash;
         }
 
-        public MatrixGetBlockByHash.HeaderBean.ProofBean getProof() {
-            return proof;
+        public String getNumber() {
+            return number;
         }
 
-        public void setProof(MatrixGetBlockByHash.HeaderBean.ProofBean proof) {
-            this.proof = proof;
+        public void setNumber(String number) {
+            this.number = number;
         }
 
         public String getStateRoot() {
@@ -113,12 +113,12 @@ public class MatrixGetBlockByNumber extends Response<MatrixGetBlockByNumber> {
             this.gasUsed = gasUsed;
         }
 
-        public String getNumber() {
-            return number;
+        public ProofBean getProof() {
+            return proof;
         }
 
-        public void setNumber(String number) {
-            this.number = number;
+        public void setProof(ProofBean proof) {
+            this.proof = proof;
         }
 
         public String getProposer() {
@@ -131,50 +131,70 @@ public class MatrixGetBlockByNumber extends Response<MatrixGetBlockByNumber> {
 
         public class ProofBean {
 
-            private String proposal;
-            private BigInteger height;
-            private BigInteger round;
-            private Map<String, String> commits;
+            private TendermintBean Tendermint;
 
-            public String getProposal() {
-                return proposal;
+            public TendermintBean getTendermint() {
+                return Tendermint;
             }
 
-            public void setProposal(String proposal) {
-                this.proposal = proposal;
+            public void setTendermint(TendermintBean Tendermint) {
+                this.Tendermint = Tendermint;
             }
 
-            public BigInteger getHeight() {
-                return height;
-            }
+            public class TendermintBean {
 
-            public void setHeight(BigInteger height) {
-                this.height = height;
-            }
+                private String proposal;
+                private BigInteger height;
+                private BigInteger round;
+                private Map<String, String> commits;
 
-            public BigInteger getRound() {
-                return round;
-            }
+                public String getProposal() {
+                    return proposal;
+                }
 
-            public void setRound(BigInteger round) {
-                this.round = round;
-            }
+                public void setProposal(String proposal) {
+                    this.proposal = proposal;
+                }
 
-            public Map<String, String> getCommits() {
-                return commits;
-            }
+                public BigInteger getHeight() {
+                    return height;
+                }
 
-            public void setCommits(Map<String, String> commits) {
-                this.commits = commits;
+                public void setHeight(BigInteger height) {
+                    this.height = height;
+                }
+
+                public BigInteger getRound() {
+                    return round;
+                }
+
+                public void setRound(BigInteger round) {
+                    this.round = round;
+                }
+
+                public Map<String, String> getCommits() {
+                    return commits;
+                }
+
+                public void setCommits(Map<String, String> commits) {
+                    this.commits = commits;
+                }
+
+                @Override
+                public String toString() {
+                    return "TendermintBean{" +
+                            "proposal='" + proposal + '\'' +
+                            ", height=" + height +
+                            ", round=" + round +
+                            ", commits=" + commits +
+                            '}';
+                }
             }
 
             @Override
             public String toString() {
                 return "ProofBean{" +
-                        "proposal='" + proposal + '\'' +
-                        ", height=" + height +
-                        ", round=" + round +
-                        ", commits=" + commits +
+                        "Tendermint=" + Tendermint +
                         '}';
             }
         }
@@ -184,49 +204,27 @@ public class MatrixGetBlockByNumber extends Response<MatrixGetBlockByNumber> {
             return "HeaderBean{" +
                     "timestamp=" + timestamp +
                     ", prevHash='" + prevHash + '\'' +
-                    ", proof=" + proof +
+                    ", number='" + number + '\'' +
                     ", stateRoot='" + stateRoot + '\'' +
                     ", transactionsRoot='" + transactionsRoot + '\'' +
                     ", receiptsRoot='" + receiptsRoot + '\'' +
                     ", gasUsed='" + gasUsed + '\'' +
-                    ", number='" + number + '\'' +
+                    ", proof=" + proof +
                     ", proposer='" + proposer + '\'' +
                     '}';
         }
     }
 
     public class BodyBean {
-        private List<MatrixGetBlockByHash.BodyBean.TransactionsBean> transactions;
 
-        public List<MatrixGetBlockByHash.BodyBean.TransactionsBean> getTransactions() {
+        private List<Map<String, String>> transactions;
+
+        public List<Map<String, String>> getTransactions() {
             return transactions;
         }
 
-        public void setTransactions(List<MatrixGetBlockByHash.BodyBean.TransactionsBean> transactions) {
+        public void setTransactions(List<Map<String, String>> transactions) {
             this.transactions = transactions;
-        }
-
-        public class TransactionsBean {
-
-
-            private String hash;
-            private String content;
-
-            public String getHash() {
-                return hash;
-            }
-
-            public void setHash(String hash) {
-                this.hash = hash;
-            }
-
-            public String getContent() {
-                return content;
-            }
-
-            public void setContent(String content) {
-                this.content = content;
-            }
         }
 
         @Override
@@ -239,7 +237,7 @@ public class MatrixGetBlockByNumber extends Response<MatrixGetBlockByNumber> {
 
     @Override
     public String toString() {
-        return "MatrixGetBlockByHash{" +
+        return "MatrixGetBlockByNumber{" +
                 "version=" + version +
                 ", hash='" + hash + '\'' +
                 ", header=" + header +
