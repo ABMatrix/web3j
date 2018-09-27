@@ -20,15 +20,7 @@ import org.web3j.utils.Async;
  */
 public abstract class Service implements Web3jService {
 
-//    protected final ObjectMapper objectMapper;
-
-//    protected final JSONObject jsonObject;
-
     public Service(boolean includeRawResponses) {
-
-//        jsonObject = new JSONObject();
-
-//        objectMapper = ObjectMapperFactory.getObjectMapper(includeRawResponses);
     }
 
     protected abstract InputStream performIO(String payload) throws IOException;
@@ -36,14 +28,12 @@ public abstract class Service implements Web3jService {
     @Override
     public <T extends Response> T send(
             Request request, Class<T> responseType) throws IOException {
-//        String payload = objectMapper.writeValueAsString(request);
 
         String payload = JSONObject.toJSONString(request);
 
         try (InputStream result = performIO(payload)) {
             if (result != null) {
                 return JSONObject.parseObject(result, responseType);
-//                return objectMapper.readValue(result, responseType);
             } else {
                 return null;
             }

@@ -15,6 +15,10 @@ public class MatrixGetTransactionReceipt extends Response<MatrixGetTransactionRe
     private String contractAddress;
     private String root;
     private String logsBloom;
+    private String errorMessage;
+    private String from;
+    private String to;
+    private String value;
     private List<LogsBean> logs;
 
     public String getTransactionHash() {
@@ -87,6 +91,38 @@ public class MatrixGetTransactionReceipt extends Response<MatrixGetTransactionRe
 
     public void setLogsBloom(String logsBloom) {
         this.logsBloom = logsBloom;
+    }
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
+
+    public String getFrom() {
+        return from;
+    }
+
+    public void setFrom(String from) {
+        this.from = from;
+    }
+
+    public String getTo() {
+        return to;
+    }
+
+    public void setTo(String to) {
+        this.to = to;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
     }
 
     public List<LogsBean> getLogs() {
@@ -209,6 +245,10 @@ public class MatrixGetTransactionReceipt extends Response<MatrixGetTransactionRe
                 ", contractAddress='" + contractAddress + '\'' +
                 ", root='" + root + '\'' +
                 ", logsBloom='" + logsBloom + '\'' +
+                ", errorMessage='" + errorMessage + '\'' +
+                ", from='" + from + '\'' +
+                ", to='" + to + '\'' +
+                ", value='" + value + '\'' +
                 ", logs=" + logs +
                 '}';
     }

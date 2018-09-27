@@ -94,7 +94,7 @@ public class JsonRpc2_0Matrix extends JsonRpc2_0Web3j implements Matrix {
     @Override
     public Request<?, MatrixGetBalance> getBalance(String address, String BlockNumber) {
         return new Request<>(
-                "getAbi",
+                "getBalance",
                 Arrays.asList(address, BlockNumber),
                 web3jService,
                 MatrixGetBalance.class);
