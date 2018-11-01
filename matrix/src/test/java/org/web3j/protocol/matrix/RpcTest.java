@@ -35,7 +35,7 @@ public class RpcTest {
     @Test
     public void testGetBlockByNumber() throws Exception {
 
-        System.out.println(matrix.getBlockByNumber("0x" + Integer.toHexString(9)).send().getResult());
+        System.out.println(matrix.getBlockByNumber("0x" + Integer.toHexString(20489)).send().getResult());
 
     }
 
