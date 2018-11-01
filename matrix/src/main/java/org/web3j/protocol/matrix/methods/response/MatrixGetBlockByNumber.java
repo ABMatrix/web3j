@@ -243,48 +243,15 @@ public class MatrixGetBlockByNumber extends Response<MatrixGetBlockByNumber> {
     }
 
     public class BodyBean {
-        private List<TransactionsBean> transactions;
 
-        public List<TransactionsBean> getTransactions() {
+        private List<Map<String, String>> transactions;
+
+        public List<Map<String, String>> getTransactions() {
             return transactions;
         }
 
-        public void setTransactions(List<TransactionsBean> transactions) {
+        public void setTransactions(List<Map<String, String>> transactions) {
             this.transactions = transactions;
-        }
-
-        public class TransactionsBean {
-            /**
-             * hash : 0xde06d7683b17a4f25697b443adcc705ee4102a0b29707dec9edc57eb6e0ae249
-             * content : 0x0ac2010a2832316632316364643439623835333739336539396366353933373530373436303338343664333963122439626136303361612d333631332d343537632d393732332d38396132343062323834666118c0843d20dfa0012a44a9059cbb00000000000000000000000022bc8581cff4597060c331e17d1e3867a1182f9b00000000000000000000000000000000000000000000000000000000000003e832200000000000000000000000000000000000000000000000000000000000000000380112419a7f2bd838835626781e4e76dfd86864862a88f6939b7cad9b3a8dabfcf18c7072b0dd26e2bc568736eca425efb6400284a3bbf1f347e81d853ba8ac1160bc6d01
-             */
-
-            private String hash;
-            private String content;
-
-            public String getHash() {
-                return hash;
-            }
-
-            public void setHash(String hash) {
-                this.hash = hash;
-            }
-
-            public String getContent() {
-                return content;
-            }
-
-            public void setContent(String content) {
-                this.content = content;
-            }
-
-            @Override
-            public String toString() {
-                return "TransactionsBean{" +
-                        "hash='" + hash + '\'' +
-                        ", content='" + content + '\'' +
-                        '}';
-            }
         }
 
         @Override
