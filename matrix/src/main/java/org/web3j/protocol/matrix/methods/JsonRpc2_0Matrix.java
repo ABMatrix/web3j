@@ -1,5 +1,7 @@
 package org.web3j.protocol.matrix.methods;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import org.web3j.protocol.Web3jService;
 import org.web3j.protocol.core.JsonRpc2_0Web3j;
 import org.web3j.protocol.core.Request;
@@ -143,5 +145,35 @@ public class JsonRpc2_0Matrix extends JsonRpc2_0Web3j implements Matrix {
                 Arrays.asList(transactionHash),
                 web3jService,
                 MatrixGetTransactionReceipt.class);
+    }
+
+    @Override
+    public Request<?, MatrixCall> call(String from, String to, String data, String blockNumber) {
+
+        JSONObject jsonObject = new JSONObject();
+
+        if (from != null) {
+
+            jsonObject.put("from", from);
+
+        }
+
+        if (to != null) {
+
+            jsonObject.put("to", to);
+
+        }
+
+        if (data != null) {
+
+            jsonObject.put("data", data);
+
+        }
+
+        return new Request<>(
+                "call",
+                Arrays.asList(jsonObject, blockNumber),
+                web3jService,
+                MatrixCall.class);
     }
 }

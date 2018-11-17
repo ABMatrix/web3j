@@ -35,7 +35,7 @@ public class RpcTest {
     @Test
     public void testGetBlockByNumber() throws Exception {
 
-        System.out.println(matrix.getBlockByNumber("0x" + Integer.toHexString(20489)).send().getResult());
+        System.out.println(matrix.getBlockByNumber("0x" + Integer.toHexString(20)).send().getResult());
 
     }
 
@@ -108,4 +108,12 @@ public class RpcTest {
         System.out.println(matrix.getTransactionReceipt("0xe8a7af3d9b11899771b0f4ad918f69cb5791fe7138007911a7552c8a8f1ca4f8").send().getResult());
 
     }
+
+    @Test
+    public void testCall() throws Exception {
+
+        System.out.println(matrix.call(null, "0xce1d8d464c1ced95b3487ecada6b495f9fc5785d", "0x18160ddd", "latest").send().getData());
+
+    }
+
 }
