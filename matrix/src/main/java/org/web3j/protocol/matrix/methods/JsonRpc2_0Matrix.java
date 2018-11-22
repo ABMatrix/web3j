@@ -176,4 +176,13 @@ public class JsonRpc2_0Matrix extends JsonRpc2_0Web3j implements Matrix {
                 web3jService,
                 MatrixCall.class);
     }
+
+    @Override
+    public Request<?, MatrixGetPeers> getPeers() {
+        return new Request<>(
+                "getPeers",
+                Collections.<String>emptyList(),
+                web3jService,
+                MatrixGetPeers.class);
+    }
 }

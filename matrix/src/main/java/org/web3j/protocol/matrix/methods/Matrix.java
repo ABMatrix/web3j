@@ -41,4 +41,6 @@ public interface Matrix extends Web3j {
 
     Request<?, MatrixCall> call(String from, String to, String data, String blockNumber);
 
+    Request<?, MatrixGetPeers> getPeers();
+
 }

@@ -84,7 +84,7 @@ public class RpcTest {
     @Test
     public void testGetMetaData() throws Exception {
 
-        System.out.println(matrix.getMetaData("latest").send().getResult().getChainName());
+        System.out.println(matrix.getMetaData("latest").send().getResult().getVersion());
 
     }
 
@@ -113,6 +113,13 @@ public class RpcTest {
     public void testCall() throws Exception {
 
         System.out.println(matrix.call(null, "0xce1d8d464c1ced95b3487ecada6b495f9fc5785d", "0x18160ddd", "latest").send().getData());
+
+    }
+
+    @Test
+    public void testGetPeers() throws Exception {
+
+        System.out.println(matrix.getPeers().send().getResult().getPeers());
 
     }
 

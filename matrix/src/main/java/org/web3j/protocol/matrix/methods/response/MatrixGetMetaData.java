@@ -12,9 +12,11 @@ public class MatrixGetMetaData extends Response<MatrixGetMetaData> {
     private String website;
     private long genesisTimestamp;
     private int blockInterval;
-    private String token_name;
-    private String token_symbol;
-    private String token_avatar;
+    private String tokenName;
+    private String tokenSymbol;
+    private String tokenAvatar;
+    private int version;
+    private int economicalModel;
     private List<String> validators;
 
     public int getChainId() {
@@ -65,28 +67,44 @@ public class MatrixGetMetaData extends Response<MatrixGetMetaData> {
         this.blockInterval = blockInterval;
     }
 
-    public String getToken_name() {
-        return token_name;
+    public String getTokenName() {
+        return tokenName;
     }
 
-    public void setToken_name(String token_name) {
-        this.token_name = token_name;
+    public void setTokenName(String tokenName) {
+        this.tokenName = tokenName;
     }
 
-    public String getToken_symbol() {
-        return token_symbol;
+    public String getTokenSymbol() {
+        return tokenSymbol;
     }
 
-    public void setToken_symbol(String token_symbol) {
-        this.token_symbol = token_symbol;
+    public void setTokenSymbol(String tokenSymbol) {
+        this.tokenSymbol = tokenSymbol;
     }
 
-    public String getToken_avatar() {
-        return token_avatar;
+    public String getTokenAvatar() {
+        return tokenAvatar;
     }
 
-    public void setToken_avatar(String token_avatar) {
-        this.token_avatar = token_avatar;
+    public void setTokenAvatar(String tokenAvatar) {
+        this.tokenAvatar = tokenAvatar;
+    }
+
+    public int getVersion() {
+        return version;
+    }
+
+    public void setVersion(int version) {
+        this.version = version;
+    }
+
+    public int getEconomicalModel() {
+        return economicalModel;
+    }
+
+    public void setEconomicalModel(int economicalModel) {
+        this.economicalModel = economicalModel;
     }
 
     public List<String> getValidators() {
@@ -96,4 +114,5 @@ public class MatrixGetMetaData extends Response<MatrixGetMetaData> {
     public void setValidators(List<String> validators) {
         this.validators = validators;
     }
+
 }
