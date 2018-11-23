@@ -20,6 +20,7 @@ public class MatrixGetTransactionReceipt extends Response<MatrixGetTransactionRe
     private String to;
     private String value;
     private List<LogsBean> logs;
+    private String data;
 
     public String getTransactionHash() {
         return transactionHash;
@@ -131,6 +132,14 @@ public class MatrixGetTransactionReceipt extends Response<MatrixGetTransactionRe
 
     public void setLogs(List<LogsBean> logs) {
         this.logs = logs;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
     }
 
     public static class LogsBean {
@@ -250,6 +259,7 @@ public class MatrixGetTransactionReceipt extends Response<MatrixGetTransactionRe
                 ", to='" + to + '\'' +
                 ", value='" + value + '\'' +
                 ", logs=" + logs +
+                ", data='" + data + '\'' +
                 '}';
     }
 }

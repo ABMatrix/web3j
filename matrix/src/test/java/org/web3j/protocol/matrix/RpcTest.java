@@ -105,7 +105,7 @@ public class RpcTest {
     @Test
     public void testGetTransactionReceipt() throws Exception {
 
-        System.out.println(matrix.getTransactionReceipt("0xe8a7af3d9b11899771b0f4ad918f69cb5791fe7138007911a7552c8a8f1ca4f8").send().getResult());
+        System.out.println(matrix.getTransactionReceipt("0x8b92985c31aaac7484d399c5b84e7735ffa43df632892e0935788be9d3a083b8").send().getResult());
 
     }
 
