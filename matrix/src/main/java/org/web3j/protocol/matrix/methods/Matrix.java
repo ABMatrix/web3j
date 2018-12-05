@@ -43,4 +43,12 @@ public interface Matrix extends Web3j {
 
     Request<?, MatrixGetPeers> getPeers();
 
+    Request<?, MatrixEstimateGas> estimateGas(String from, String to, String value, String data, String blockNumber);
+
+    Request<?, MatrixGetGasPrice> getGasPrice();
+
+    Request<?, MatrixSyncing> syncing();
+
+    Request<?, MatrixGetTransactionReceiptEx> getTransactionReceiptEx(String transactionHash);
+
 }

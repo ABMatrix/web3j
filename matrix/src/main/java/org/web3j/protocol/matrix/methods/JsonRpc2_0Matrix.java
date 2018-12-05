@@ -1,6 +1,5 @@
 package org.web3j.protocol.matrix.methods;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import org.web3j.protocol.Web3jService;
 import org.web3j.protocol.core.JsonRpc2_0Web3j;
@@ -184,5 +183,70 @@ public class JsonRpc2_0Matrix extends JsonRpc2_0Web3j implements Matrix {
                 Collections.<String>emptyList(),
                 web3jService,
                 MatrixGetPeers.class);
+    }
+
+    @Override
+    public Request<?, MatrixEstimateGas> estimateGas(String from, String to, String value, String data, String blockNumber) {
+
+        JSONObject jsonObject = new JSONObject();
+
+        if (from != null) {
+
+            jsonObject.put("from", from);
+
+        }
+
+        if (to != null) {
+
+            jsonObject.put("to", to);
+
+        }
+
+        if (value != null) {
+
+            jsonObject.put("value", value);
+
+        }
+
+        if (data != null) {
+
+            jsonObject.put("data", data);
+
+        }
+
+        return new Request<>(
+                "estimateGas",
+                (blockNumber == null)
+                        ? Arrays.asList(jsonObject)
+                        : Arrays.asList(jsonObject, blockNumber),
+                web3jService,
+                MatrixEstimateGas.class);
+    }
+
+    @Override
+    public Request<?, MatrixGetGasPrice> getGasPrice() {
+        return new Request<>(
+                "getGasPrice",
+                Collections.<String>emptyList(),
+                web3jService,
+                MatrixGetGasPrice.class);
+    }
+
+    @Override
+    public Request<?, MatrixSyncing> syncing() {
+        return new Request<>(
+                "syncing",
+                Collections.<String>emptyList(),
+                web3jService,
+                MatrixSyncing.class);
+    }
+
+    @Override
+    public Request<?, MatrixGetTransactionReceiptEx> getTransactionReceiptEx(String transactionHash) {
+        return new Request<>(
+                "getTransactionReceiptEx",
+                Arrays.asList(transactionHash),
+                web3jService,
+                MatrixGetTransactionReceiptEx.class);
     }
 }

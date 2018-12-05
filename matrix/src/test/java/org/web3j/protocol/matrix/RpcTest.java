@@ -42,7 +42,7 @@ public class RpcTest {
     @Test
     public void testGetTransaction() throws Exception {
 
-        System.out.println(matrix.getTransaction("0x6011915176e24a1cd70e022984ca37c1e4c5a243e32303e87dd510e70da7a1c5").send().getResult().getHash());
+        System.out.println(matrix.getTransaction("0x8e62fb58b26ef5455c7b529b6c56bc84e731c8ca06cc4b5538622302ad3dce96").send().getResult().getHash());
 
     }
 
@@ -105,7 +105,7 @@ public class RpcTest {
     @Test
     public void testGetTransactionReceipt() throws Exception {
 
-        System.out.println(matrix.getTransactionReceipt("0x8b92985c31aaac7484d399c5b84e7735ffa43df632892e0935788be9d3a083b8").send().getResult());
+        System.out.println(matrix.getTransactionReceipt("0x9b5cb468fb34f67ba2663255b1f0aa8e000d037e06c9fa6759cbe99f04cb7eb2").send().getResult());
 
     }
 
@@ -123,4 +123,31 @@ public class RpcTest {
 
     }
 
+    @Test
+    public void testEstimateGas() throws Exception {
+
+        System.out.println(matrix.estimateGas(null, "0x0D9C9CDC6BFF56520772195948A6B13C2b2bAA8a", null, "0xa9059cbb000000000000000000000000f8f6f31a14b73a71a310d7b8a895e20261fe09d40000000000000000000000000000000000000000000000000000000000004e20", "latest").send().getResult());
+
+    }
+
+    @Test
+    public void testGetGasPrice() throws Exception {
+
+        System.out.println(matrix.getGasPrice().send().getResult());
+
+    }
+
+    @Test
+    public void testSyncing() throws Exception {
+
+        System.out.println(matrix.syncing().send().getResult());
+
+    }
+
+    @Test
+    public void testGetTransactionReceiptEx() throws Exception {
+
+        System.out.println(matrix.getTransactionReceiptEx("0x9b5cb468fb34f67ba2663255b1f0aa8e000d037e06c9fa6759cbe99f04cb7eb2").send().getResult());
+
+    }
 }

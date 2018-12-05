@@ -25,7 +25,7 @@ public class MatrixGetPeers extends Response<MatrixGetPeers> {
 
         private String ip;
         private String port;
-        private String account;
+        private String proposer;
 
         public String getIp() {
             return ip;
@@ -43,12 +43,12 @@ public class MatrixGetPeers extends Response<MatrixGetPeers> {
             this.port = port;
         }
 
-        public String getAccount() {
-            return account;
+        public String getProposer() {
+            return proposer;
         }
 
-        public void setAccount(String account) {
-            this.account = account;
+        public void setProposer(String proposer) {
+            this.proposer = proposer;
         }
     }
 
