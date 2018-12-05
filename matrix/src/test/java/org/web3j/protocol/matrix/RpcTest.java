@@ -28,7 +28,7 @@ public class RpcTest {
     @Test
     public void testGetBlockByHash() throws Exception {
 
-        System.out.println(matrix.getBlockByHash("0x0279e6ba01d88afe886a16d5e28b22213d955577e258312aadc8a49a284ee5e7").send().getResult().getHash());
+        System.out.println(matrix.getBlockByHash("0xf238112feab8d0c5416d7108eadfeffc23797498466839b775554fa6527847b9").send().getResult());
 
     }
 
